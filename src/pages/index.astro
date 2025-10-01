@@ -1,11 +1,18 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
-
-<Layout>
-	<Welcome />
+<Layout title="Refrical - Instalaciones de Frío y Calor" description="Empresa líder en climatización y frío industrial en Ciudad Real.">
+  <Header />
+  <main>
+    <section class="bg-blue-600 text-white text-center py-20">
+      <div class="container mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Soluciones Integrales de Climatización</h1>
+        <p class="text-lg mb-8">Profesionales en frío industrial, calefacción y aire acondicionado.</p>
+        <a href="/contacto" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">Solicitar Presupuesto</a>
+      </div>
+    </section>
+    </main>
+  <Footer />
 </Layout>

@@ -1,0 +1,20 @@
+---
+const navLinks = [
+    { href: '/', text: 'Inicio' },
+    { href: '/servicios', text: 'Servicios' },
+    { href: '/nosotros', text: 'Sobre Nosotros' },
+    { href: '/contacto', text: 'Contacto' }
+];
+---
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-blue-600">Refrical</a>
+        <ul class="hidden md:flex space-x-6">
+            {navLinks.map(link => (
+                <li>
+                    <a href={link.href} class="hover:text-blue-600 transition-colors duration-300">{link.text}</a>
+                </li>
+            ))}
+        </ul>
+        </nav>
+</header>

@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const services = [
+    { title: 'Frío Industrial', description: 'Diseño, instalación y mantenimiento de sistemas de refrigeración para la industria y el comercio.' },
+    { title: 'Aire Acondicionado', description: 'Instalación de sistemas de climatización para particulares y empresas. Confort garantizado.' },
+    { title: 'Calefacción', description: 'Soluciones de calefacción eficientes y sostenibles para todo tipo de espacios.' },
+    { title: 'Fontanería Profesional', description: 'Servicios completos de fontanería para obras nuevas y reparaciones.' }
+];
+---
+<Layout title="Servicios - Refrical" description="Conozca nuestras soluciones en frío, calor y fontanería.">
+  <Header />
+  <main class="container mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-10">Nuestros Servicios</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map(service => <ServiceCard title={service.title} description={service.description} />)}
+    </div>
+  </main>
+  <Footer />
+</Layout>
